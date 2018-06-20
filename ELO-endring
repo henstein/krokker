@@ -19,7 +19,7 @@ def ratingendring(vinner_rating, taper_rating):
     
     print("Vinneren går fra ", vinner_rating, " til ", ny_rating_vinner)
     print("Taperratingen(e): ")
-    for range(len(taper_rating)):
+    for i in range(len(taper_rating)):
         print("Fra ", taper_rating[taper], "til ", ny_rating_taper[taper])
         
  ratingendring(vinner_rating, taper_rating)
