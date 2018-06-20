@@ -1,6 +1,6 @@
 """Denne fila søker å ta input etter krokketkamper og deretter gi ny rating til spillerne"""
 
-vinner_rating = input("Hva var ratingen til vinneren? ")
+vinner_rating = int(input("Hva var ratingen til vinneren? "))
 taper_rating = [int(x) for x in input("Hva var ratingen til taperen(e)? (separer med mellomrom) ").split()]
 
 def ratingendring(vinner_rating, taper_rating):
