@@ -1,7 +1,7 @@
 """Denne fila søker å ta input etter krokketkamper og deretter gi ny rating til spillerne"""
 
-vinner_rating = int(input("Hva var ratingen til vinneren? "))
-taper_rating = [int(x) for x in input("Hva var ratingen til taperen(e)? (separer med mellomrom) ").split()]
+vinner = int(input("Hva var ratingen til vinneren? "))
+taper = [int(x) for x in input("Hva var ratingen til taperen(e)? (separer med mellomrom) ").split()]
 
 def ratingendring(vinner_rating, taper_rating):
     """ Gjør ELO-beregning, justerer rating og returnerer før- og etterrating """
@@ -22,7 +22,7 @@ def ratingendring(vinner_rating, taper_rating):
     for i in range(len(taper_rating)):
         print("Fra ", taper_rating[taper], "til ", ny_rating_taper[taper])
         
-ratingendring(vinner_rating, taper_rating)
+ratingendring(vinner, taper)
 print("Takk for at du spiller")
     
     
