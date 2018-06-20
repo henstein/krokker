@@ -22,8 +22,8 @@ def ratingendring(vinner_rating, taper_rating):
     for i in range(len(taper_rating)):
         print("Fra ", taper_rating[taper], "til ", ny_rating_taper[taper])
         
- ratingendring(vinner_rating, taper_rating)
- print("Takk for at du spiller")
+ratingendring(vinner_rating, taper_rating)
+print("Takk for at du spiller")
     
     
 
