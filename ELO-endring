@@ -11,7 +11,8 @@ def ratingendring(vinner_rating, taper_rating):
  
     for taper in taper_rating:
         ny_rating_vinner = ny_rating_vinner + 40 * (1 - (1 - 1 / (1 + 10 **((vinner_rating - taper) / 400))
-        ny_rating_taper.append(taper - 40 * (1 - (1 - 1 / (1 + 10 **((vinner_rating - taper) / 400)))))
+        ny_taper = taper - 40 * (1 - (1 - 1 / (1 + 10 **((vinner_rating - taper) / 400))))
+        ny_rating_taper.append(ny_taper)
         
     return ny_rating_vinner
     return ny_rating_taper
