@@ -3,26 +3,41 @@
 vinner = int(input("Hva var ratingen til vinneren? "))
 taper = [int(x) for x in input("Hva var ratingen til taperen(e)? (separer med mellomrom) ").split()]
 
-def ratingendring(vinner_rating, taper_rating):
-    """ Gjør ELO-beregning, justerer rating og returnerer før- og etterrating """
+def ratingendring_vinner(vinner_rating, taper_rating):
+    """ Gjør ELO-beregning, returnerer ny rating for vinneren """
     
-    ny_rating_taper = [ ]
     ny_rating_vinner = vinner_rating
  
     for taper in taper_rating:
         ny_rating_vinner = ny_rating_vinner + 40 * (1 - (1 - 1 / (1 + 10 **((vinner_rating - taper) / 400))))
+        
+    return ny_rating_vinner
+    
+def ratingendring_taper(vinner_rating, taper_rating):
+    """ Gjør ELO-beregning, returnerer ny rating for taperne """
+    
+    ny_rating_taper = [ ]
+ 
+    for taper in taper_rating:
         ny_taper = taper - 40 * (1 - (1 - 1 / (1 + 10 **((vinner_rating - taper) / 400))))
         ny_rating_taper.append(ny_taper)
         
-    return ny_rating_vinner
     return ny_rating_taper
     
-    print("Vinneren går fra ", vinner_rating, " til ", ny_rating_vinner)
+# bygg ren printefunksjon under her
+
+def print_ratinger(vinner, taper):
+# Funksjonen skal printe de gamle ratingene og de nye ratingene fra vinner- og taperfunksjonene
+    
+    win = ratingendring_vinner(vinner, taper)
+    tap = ratingendring_taper(vinner, taper)
+    
+    print("Vinneren går fra ", vinner, " til ", win)
     print("Taperratingen(e): ")
-    for i in range(len(taper_rating)):
-        print("Fra ", taper_rating[taper], "til ", ny_rating_taper[taper])
+    for i in range(len(taper)):
+        print("Fra ", taper[i], "til ", tap[i])
         
-ratingendring(vinner, taper)
+print_ratinger(vinner, taper)
 print("Takk for at du spiller")
     
     
