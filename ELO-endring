@@ -39,7 +39,7 @@ def print_ratinger(vinner, taper):
         
 print_ratinger(vinner, taper)
 print("Takk for at du spiller")
-    
+input('Press ENTER to exit')
     
 
 
