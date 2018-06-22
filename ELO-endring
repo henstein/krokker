@@ -23,8 +23,6 @@ def ratingendring_taper(vinner_rating, taper_rating):
         ny_rating_taper.append(ny_taper)
         
     return ny_rating_taper
-    
-# bygg ren printefunksjon under her
 
 def print_ratinger(vinner, taper):
 # Funksjonen skal printe de gamle ratingene og de nye ratingene fra vinner- og taperfunksjonene
@@ -33,12 +31,15 @@ def print_ratinger(vinner, taper):
     tap = ratingendring_taper(vinner, taper)
     
     print("Vinneren går fra ", vinner, " til ", win)
+    print
     print("Taperratingen(e): ")
     for i in range(len(taper)):
         print("Fra ", taper[i], "til ", tap[i])
         
 print_ratinger(vinner, taper)
+print
 print("Takk for at du spiller")
+print
 input('Press ENTER to exit')
     
 
