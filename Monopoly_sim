@@ -2,6 +2,8 @@
 
 import random
 
+Sim_antall_kast = input(«Hvor mange kast skal du simulere?»)
+
 def two_dice_x_times(number_of_throws):
     throw_list = []
     throw_poss = [2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 11, 11, 12]
@@ -9,6 +11,9 @@ def two_dice_x_times(number_of_throws):
         rand_throw = throws_poss[random.randint(1, 36)]
         throw_list.append(rand_throw)
     return throw_list
+
+def sjanse_sim
+#Denne må simulere sjansetrekking og flytte brikken når det kommer et slikt sjansekort. Husk at brukte sjansekort må stokkes inn etter at stokken er tom. Funksjonen må returnere enten at brikkeplassering = brikkeplassering, eller at brikkeplassering = en bestemt tallplassering på brettet. Kortene i stokken må randomiseres i en liste og plukkes fra en stokk. (pop-metode?) Trengs en egen funksjon for dette, eller kan den legges inn i monopolsimmen som en elif?)
 
 monopoly_board = { 0 : «START»
 							1 : «Parkveien»,
@@ -50,11 +55,17 @@ monopoly_board = { 0 : «START»
 							39 : «Rådhusplassen»							}
 
 
-Stat_holder = { 		0 : 0,
-							1 : 0,
-							2 : 0,
-							3 : 0,
-							4 : 0,
+def sim_monopol(antall_kast):
+#Denne skal simulere et spill monopol. Benytter seg av en generert kastserie overfor og av sjansesimuileringen til å flytte brikken. Brikkeplasseringene blir dokumentert i statholderen inni funksjonen og det er denne statistikken som blir returnert til slutt.
+
+    Brikke_plassering = 0
+    kastserie = two_dice_x_times(antall_kast)
+    flyttinger = 0
+    Stat_holder = { 0 : 0,
+	       			   1 : 0,
+				      	2 : 0,
+					 		3 : 0,
+					      4 : 0,
 							5 : 0,
 							6 : 0,
 							7 : 0,
@@ -88,4 +99,12 @@ Stat_holder = { 		0 : 0,
 							37 : 0,
 							38 : 0,
 							39 : 0»							}
+
+    for i in kastserie:
+        brikke_plassering = brikke_plassering + kastserie[i]
+        stat_holder[brikke_plassering] += 1
+        if
+
+        
+        
 
