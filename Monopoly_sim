@@ -1,0 +1,91 @@
+# Dette programmet skal simulere det antall kast i monopol som legges inn av brukeren. Tilbake skal brukeren få statistikk på hvor ofte hvert feltet på brettet ble besøkt. Under bygging.
+
+import random
+
+def two_dice_x_times(number_of_throws):
+    throw_list = []
+    throw_poss = [2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 11, 11, 12]
+    while number_of_throws > len(throw_list):
+        rand_throw = throws_poss[random.randint(1, 36)]
+        throw_list.append(rand_throw)
+    return throw_list
+
+monopoly_board = { 0 : «START»
+							1 : «Parkveien»,
+							2 : «Sjanse»,
+							3 : «Kirkegata»,
+							4 : «Skatt»,
+							5 : «Den norske amerikalinje»,
+							6 : «Prinsens Gate»,
+							7 : «Sjanse»,
+							8 : «Dronningens Gate»,
+							9 : «Øvre Slottsgate»,
+							10 : «Besøk i fengsel»,
+							11 : «Nedre Slottsgate»,
+							12 : «Verksted»,
+							13 : «Trondheimsveien»,
+							14 : «Nobels Gate»,
+							15 : «Bergenske Dampskipsselskap»,
+							16 : «Grensen»,
+							17 : «Sjanse»,
+							18 : «Gabels Gate»,
+							19 : «Ringveien»,
+							20 : «Fri parkering»,
+							21 : «Bygdøy Alle»,
+							22 : «Sjanse»,
+							23 : «Skarpsno»,
+							24 : «Slemdal»,							25 : «Kosmos»,
+							26 : «Karl Johans Gate»,
+							27 : «Storgata»,
+							28 : «Vannverket»,
+							29 : «Torggata»,
+							30 : «Fengsel»,							31 : «Trosterudveien»,
+							32 : «Pilestredet»,
+							33 : «Sjanse»,
+							34 : «Sinsen»,
+							35 : «Bastøyferga»,
+							36 : «Sjanse»,
+							37 : «Ullevål Hageby»,
+							38 : «luksusskatt»,
+							39 : «Rådhusplassen»							}
+
+
+Stat_holder = { 		0 : 0,
+							1 : 0,
+							2 : 0,
+							3 : 0,
+							4 : 0,
+							5 : 0,
+							6 : 0,
+							7 : 0,
+							8 : 0,
+							9 : 0,
+							10 : 0,
+							11 : 0,
+							12 : 0,
+							13 : 0,
+							14 : 0,
+							15 : 0,
+							16 : 0,
+							17 : 0,
+							18 : 0,
+							19 : 0,
+							20 : 0,
+							21 : 0,
+							22 : 0,
+							23 : 0,
+							24 : 0,										25 : 0,
+							26 : 0,
+							27 : 0,
+							28 : 0,
+							29 : 0,
+							30 : 0,										31 : 0,
+							32 : 0,
+							33 : 0,
+							34 : 0,
+							35 : 0,
+							36 : 0,
+							37 : 0,
+							38 : 0,
+							39 : 0»							}
+
